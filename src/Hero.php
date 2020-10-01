@@ -15,7 +15,9 @@ class Hero
                 Textarea::make('Überschrift', 'headline')
                     ->rows(2)
                     ->translatable(),
-                MediaField::make('Bild', 'image'),
+                MediaField::make('Bilder', 'images')
+                    ->multiple()
+                    ->collection('hero'),
             ])
             ->button('Banner hinzufügen')
             ->stacked();
